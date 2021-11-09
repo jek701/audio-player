@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(244, 245, 254, 1);
+}
+
+.header-title {
+    top: 0;
+    position: fixed;
+    z-index: 2;
+    background: rgba(244, 245, 254, 1);
+    width: calc(900px - 2em);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: .5em 2em;
+    color: #6c6c6c;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.header-title li:nth-child(1) {
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.header-title li:nth-child(2) {
+    width: 400px;
+}
+
+.header-title li:nth-child(3) {
+    width: 275px;
+}
+
+.title {
+    width: 400px;
+}
+
+.artist-name {
+    width: 200px;
+}
+
+.rhap_controls-section {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rhap_button-clear {
+    width: 50px;
+    height: 50px;
+}
+
+.rhap_main-controls {
+    display: flex;
+    flex-direction: row;
+}
+
+.rhap_play-pause-button {
+    border-radius: 50%;
+    border: none;
+    background: #000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin: 0 1em;
+    cursor: pointer;
+}
+
+.rhap_skip-button {
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.rhap_repeat-button,
+.rhap_volume-button {
+    background: #eee;
+    border: none;
+    border-radius: 16px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.rhap_main {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 2em;
+    padding: 4em 1em 2em 1em;
+    background: #fff;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 25px;
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, .2);
+}
+
+.playlist-wrapper {
+    width: 100%;
+    min-width: 900px;
+    height: calc(100vh - 182px);
+    background: rgba(244, 245, 254, 1);
+    overflow-y: scroll;
+    margin: 1em auto;
+    padding-bottom: 3em;
+    padding-top: 2em;
+}
+
+.playlist-block {
+    max-width: calc(800px - 2em);
+    background: transparent;
+    padding: 1em;
+    border-radius: 8px;
+    margin: .4em auto;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all .15s ease;
+}
+
+.playlist-block:hover {
+    background: #fff;
+}
+
+.playlist-block.active {
+    padding: 1em;
+    transform: scale(1.02);
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .2);
+    font-size: 20px;
+    background: #fff;
+    font-weight: 600;
+}
+
+
+.rhap_progress-container {
+    max-width: 725px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.rhap_current-time,
+.rhap_time {
+    width: 40px;
+}
+
+.rhap_progress-bar,
+.rhap_progress-indicator,
+.rhap_progress-filled,
+.rhap_progress-progress {
+    height: 10px !important;
+    margin: 5px;
+    max-width: 725px;
+}
+
+.rhap_progress-filled {
+    margin: 5px 5px 5px 0;
+}
+
+
+.rhap_repeat-button {
+    display: none !important;
+}
+
+.rhap_progress-filled {
+    background: #000;
+    border-radius: 100px;
+    z-index: 3;
+    margin-top: -15px;
+    position: relative;
+}
+
+.rhap_progress-filled:hover .rhap_progress-filled::after {
+    width: 15px;
+    height: 15px;
+}
+
+.rhap_progress-filled::after {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 5px;
+    right: -15px;
+    content: '';
+    background: #000;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+.rhap_progress-indicator {
+    background: #eee;
+    border-radius: 100px;
+}
+
+.rhap_progress-section {
+    max-width: 900px;
+    margin: 0 auto 1em auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rhap_download-progress {
+    /*max-width: 725px;*/
+    margin-top: -15px;
+    height: 10px;
+    border-radius: 100px;
+    background: #b0b0b0;
+}
+
+.playlist-block {
+    display: flex;
+    flex-direction: row;
+}
+
+.id {
+    margin-right: 1em;
+}
+
+.rhap_volume-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rhap_volume-container:hover .rhap_volume-bar-area {
+    width: 100px;
+}
+
+.rhap_volume-container:hover .rhap_volume-indicator {
+    opacity: 1;
+}
+
+.rhap_volume-bar-area {
+    transition: width .3s ease;
+    margin-left: 1em;
+    width: 0px;
+    height: 8px;
+    border-radius: 100px;
+    background: #eee;
+}
+
+.rhap_volume-bar {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 8px;
+    background: #000;
+    border-radius: 100px;
+}
+
+.rhap_volume-indicator {
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    height: 8px;
+    left: 0;
+    background: #eee;
+    opacity: 1;
+    border-radius: 0 100px 100px 0;
+    cursor: pointer;
+}
+
+.rhap_volume-filled {
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    background-color: #000000;
+    border-radius: 2px;
+}
