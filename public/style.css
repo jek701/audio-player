@@ -12,14 +12,10 @@ body {
 }
 
 .header-title {
-    top: 0;
-    position: fixed;
-    z-index: 2;
     background: rgba(244, 245, 254, 1);
-    width: calc(900px - 2em);
-    left: 50%;
-    transform: translateX(-50%);
-    padding: .5em 2em;
+    width: 850px;
+    margin: 0 auto;
+    padding: .5em 20px;
     color: #6c6c6c;
     display: flex;
     flex-direction: row;
@@ -28,7 +24,7 @@ body {
 }
 
 .header-title li:nth-child(1) {
-    width: 80px;
+    width: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,11 +32,19 @@ body {
 }
 
 .header-title li:nth-child(2) {
-    width: 400px;
+    width: 40px;
 }
 
 .header-title li:nth-child(3) {
-    width: 275px;
+    width: 400px;
+}
+
+.header-title li:nth-child(4) {
+    width: 200px;
+}
+
+.header-title li:nth-child(5) {
+    width: 80px;
 }
 
 .title {
@@ -106,8 +110,8 @@ body {
     position: fixed;
     left: 0;
     right: 0;
-    bottom: 2em;
-    padding: 4em 1em 2em 1em;
+    bottom: 1em;
+    padding: 2em 1em 1em 1em;
     background: #fff;
     max-width: 900px;
     margin: 0 auto;
@@ -118,7 +122,7 @@ body {
 .playlist-wrapper {
     width: 100%;
     min-width: 900px;
-    height: calc(100vh - 182px);
+    height: calc(100vh - 27em);
     background: rgba(244, 245, 254, 1);
     overflow-y: scroll;
     margin: 1em auto;
@@ -127,7 +131,7 @@ body {
 }
 
 .playlist-block {
-    max-width: calc(800px - 2em);
+    max-width: 850px;
     background: transparent;
     padding: 1em;
     border-radius: 8px;
@@ -290,4 +294,43 @@ body {
     z-index: 2;
     background-color: #000000;
     border-radius: 2px;
+}
+
+.duration {
+    width: 80px;
+}
+
+.cover {
+    display: block;
+    width: 40px;
+    height: 40px;
+    object-fit: fill;
+}
+
+.curr-music-wrapper {
+    width: 100%;
+    height: 230px;
+    max-width: 900px;
+    margin: 1em auto;
+    border-radius: 26px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, .2);
+    overflow: hidden;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.curr-music-wrapper img {
+    border-radius: 16px;
+    height: calc(230px - 2em);
+    width: calc(230px - 2em);
+    object-fit: contain;
+    margin-right: 3em;
+}
+
+.curr-music-wrapper h3 {
+    margin-top: .5em;
+    font-weight: 500;
 }
