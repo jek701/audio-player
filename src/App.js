@@ -11,7 +11,7 @@ const App = () => {
     const [playing, setPlaying] = useState(true)
 
     useEffect(() =>{
-        fetch(`https://audio.iodev.uz/public/music`, {
+        fetch(`https://apiradio.bellissimo.uz/public/music`, {
         })
             .then((response) => response.json())
             .then(e => setApiData(e))
@@ -27,7 +27,7 @@ const App = () => {
             {apiData.map((i, index) => {
                 return <PlaylistBlock
                     duration={i.playtime}
-                    src={'https://audio.iodev.uz/' + i.url}
+                    src={'https://apiradio.bellissimo.uz/' + i.url}
                     onclick={() => setCurrMusic(index)}
                     id={index + 1} active={currMusic === index ? 'active' : ''}
                     title={i.title}
@@ -75,7 +75,7 @@ const App = () => {
                     showJumpControls={false}
                     autoPlay={true}
                     preload={"auto"}
-                    src={'https://audio.iodev.uz/' + apiData[currMusic].url}
+                    src={'https://apiradio.bellissimo.uz/' + apiData[currMusic].url}
                     onPlay={() => setPlaying(true)}
                     onPause={() => setPlaying(false)}
                     onEnded={() => currMusic === (apiData.length - 1) ? setCurrMusic(0) : setCurrMusic(currMusic + 1)}
