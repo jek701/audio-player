@@ -15,10 +15,7 @@ const App = () => {
         })
             .then((response) => response.json())
             .then(e => setApiData(e))
-        })
-    useEffect(() => {
-        console.log(playing)
-    }, [playing])
+        }, [])
 
     return <>
         <div className='playlist-wrapper'>
@@ -74,7 +71,7 @@ const App = () => {
                     showSkipControls={true}
                     showJumpControls={false}
                     autoPlay={true}
-                    preload={"auto"}
+                    preload={'none'}
                     src={'https://apiradio.bellissimo.uz/' + apiData[currMusic].url}
                     onPlay={() => setPlaying(true)}
                     onPause={() => setPlaying(false)}
@@ -85,12 +82,6 @@ const App = () => {
                     muted={false}
                     layout="stacked-reverse"
                 />
-                {/*<PlaylistBlock*/}
-                {/*    img={currMusic === (apiData.length - 1) ? 'data:image/png;base64,' + apiData[0].cover : 'data:image/png;base64,' + apiData[(currMusic + 1)].cover}*/}
-                {/*    title={currMusic === (apiData.length - 1) ? apiData[0].title : apiData[(currMusic + 1)].title}*/}
-                {/*    artist={currMusic === (apiData.length - 1) ? apiData[0].artist : apiData[(currMusic + 1)].artist}*/}
-                {/*    audioWave={''}*/}
-                {/*/>*/}
             </div>
             :
             null}
